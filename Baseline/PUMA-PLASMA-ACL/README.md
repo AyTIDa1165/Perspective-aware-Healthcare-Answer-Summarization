@@ -1,6 +1,3 @@
-# PUMA Dataset
- Access Request: To request access, please email gnaik826@gmail.com with your purpose for using the dataset and your affiliation.
-
 # Training
 To train the model, run:
 python src/train.py
