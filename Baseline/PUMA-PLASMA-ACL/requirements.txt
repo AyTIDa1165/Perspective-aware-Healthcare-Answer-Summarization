@@ -1,0 +1,10 @@
+torch
+transformers
+peft
+datasets
+nltk
+tqdm
+scipy
+bert-score
+rouge-score
+pandas
