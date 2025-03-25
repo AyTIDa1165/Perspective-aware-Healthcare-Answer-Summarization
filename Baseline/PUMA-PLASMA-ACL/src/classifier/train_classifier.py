@@ -3,9 +3,12 @@ import argparse
 from transformers import RobertaTokenizer, RobertaForSequenceClassification
 import sys
 sys.path.insert(0, './') 
-from classifier.classifier_dataloader import *
+# from classifier.classifier_dataloader import *
+from classifier_dataloader import *
 from transformers import Seq2SeqTrainer, Seq2SeqTrainingArguments, DataCollatorForSeq2Seq
-from transformers import AdamW, get_linear_schedule_with_warmup
+# from transformers import AdamW, get_linear_schedule_with_warmup
+from torch.optim import AdamW
+from transformers import get_linear_schedule_with_warmup
 from tqdm import tqdm
 import numpy as np
 import os
@@ -36,11 +39,13 @@ def validation(valid_dataloader, model, VALID_BATCH_SIZE, optimizer, scheduler):
 if __name__=="__main__":
    
     TRAIN_BATCH_SIZE = 8
-    with open('/home/gaurin/Summ_B/data/PREPROCESSED/preprocessed_train_data.json', 'r') as json_file:
+    # with open('/home/gaurin/Summ_B/data/PREPROCESSED/preprocessed_train_data.json', 'r') as json_file:
+    with open('/home/apf/dev_users/aarya/NLP/Perspective-aware-Healthcare-Answer-Summarization/Baseline/PUMA-PLASMA-ACL/puma_dataset-20250325T041732Z-001/puma_dataset/train.json', 'r') as json_file:
         train_data = json.load(json_file)
 
     VALID_BATCH_SIZE = 4
-    with open('/home/gaurin/Summ_B/data/PREPROCESSED/preprocessed_valid_data.json', 'r') as json_file:
+    # with open('/home/gaurin/Summ_B/data/PREPROCESSED/preprocessed_valid_data.json', 'r') as json_file:
+    with open('/home/apf/dev_users/aarya/NLP/Perspective-aware-Healthcare-Answer-Summarization/Baseline/PUMA-PLASMA-ACL/puma_dataset-20250325T041732Z-001/puma_dataset/valid.json', 'r') as json_file:
         valid_data = json.load(json_file)
     
     LEARNING_RATE = 1e-05
