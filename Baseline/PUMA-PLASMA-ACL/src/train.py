@@ -5,7 +5,8 @@ from transformers import BartTokenizer, BartForConditionalGeneration,GPT2LMHeadM
 from peft import get_peft_config, get_peft_model, get_peft_model_state_dict, PrefixTuningConfig, TaskType
 import sys
 sys.path.insert(0, './') 
-from src.FLANT5.prefix_energy.prefix_energy_train_dataloader import * 
+# from src.FLANT5.prefix_energy.prefix_energy_train_dataloader import * 
+from src.train_dataloader import *
 from transformers import Seq2SeqTrainer, Seq2SeqTrainingArguments, DataCollatorForSeq2Seq, AdamW, get_linear_schedule_with_warmup, RobertaForSequenceClassification, RobertaTokenizer
 from tqdm import tqdm
 import numpy as np
