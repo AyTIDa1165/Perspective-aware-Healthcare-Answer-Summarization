@@ -79,8 +79,8 @@ class CustomDataset(Dataset):
             "labels": labels["input_ids"].squeeze(),
             "perspective": self.data[idx]['Perspective'],
             "Summary": self.data[idx]['Summary']
-           
         }
+    
 def create_dataloader(train_dataset,valid_dataset, TRAIN_BATCH_SIZE, VALID_BATCH_SIZE ):
     
     train_dataloader= DataLoader(dataset = train_dataset, batch_size = TRAIN_BATCH_SIZE, shuffle= True)

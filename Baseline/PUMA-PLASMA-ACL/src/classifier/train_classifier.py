@@ -61,12 +61,12 @@ if __name__=="__main__":
     print("best_loss",best_loss)
     last_epoch = 0
 
-    # tokenizer = RobertaTokenizer.from_pretrained('roberta-base', truncation=True, do_lower_case=True)
-    # model = RobertaForSequenceClassification.from_pretrained("roberta-base", num_labels=5)  # Change num_labels to match your number of classes
+    tokenizer = RobertaTokenizer.from_pretrained('roberta-base', truncation=True, do_lower_case=True)
+    model = RobertaForSequenceClassification.from_pretrained("roberta-base", num_labels=5)  # Change num_labels to match your number of classes
             
-    # train_dataset = CustomDataset(train_data,tokenizer)
-    # eval_dataset = CustomDataset(valid_data,tokenizer)
-    # train_dataloader, eval_dataloader = create_dataloader(train_dataset, eval_dataset,  VALID_BATCH_SIZE, TRAIN_BATCH_SIZE)
+    train_dataset = CustomDataset(train_data,tokenizer)
+    eval_dataset = CustomDataset(valid_data,tokenizer)
+    train_dataloader, eval_dataloader = create_dataloader(train_dataset, eval_dataset,  VALID_BATCH_SIZE, TRAIN_BATCH_SIZE)
     
 
     # # Define optimizer and learning rate scheduler
