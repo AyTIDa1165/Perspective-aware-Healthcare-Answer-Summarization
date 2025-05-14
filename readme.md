@@ -66,8 +66,6 @@ To evaluate the generated summaries, follow these steps:
 - Set the variable `MODEL_NAME` to `<model_name>` within the notebook.
 - Execute all cells in the notebook to evaluate the model's performance.
 
-This evaluation will generate metrics such as ROUGE, BLEU, METEOR, and BERTScore for the generated summaries.
-
 Supported metrics:
 
 * ROUGE-1, ROUGE-2, ROUGE-L
