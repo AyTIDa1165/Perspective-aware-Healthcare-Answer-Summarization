@@ -94,9 +94,6 @@ Supported metrics:
 
 ## 📅 Citation
 
-For the baseline experiments, please refer to the following repository:
-- **PUMA-PLASMA-ACL**: [GitHub Link to Model](https://github.com/GauriNaik826/PUMA-PLASMA-ACL)
-
 ```
 @inproceedings{gupta2025perspectramed,
   title={PerSpectraMed: Adaptable Perspective Summarization for Healthcare QA via LoRA-Tuned Language Models},
@@ -105,6 +102,8 @@ For the baseline experiments, please refer to the following repository:
   note={Under submission}
 }
 ```
+Note: For the baseline experiments, please refer to the following repository:
+- **PUMA-PLASMA-ACL**: [GitHub Link to Model](https://github.com/GauriNaik826/PUMA-PLASMA-ACL)
 
 ---
 
